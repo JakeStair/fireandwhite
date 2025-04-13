@@ -1,6 +1,6 @@
 // src/Authentication.tsx
 import React, { useState } from 'react';
-import { auth } from './firebaseConfig'; // Import auth from firebaseConfig
+import { auth } from '../firebaseConfig'; // Import auth from firebaseConfig
 import { createUserWithEmailAndPassword } from 'firebase/auth'; // Firebase Auth function
 
 const Authentication = () => {

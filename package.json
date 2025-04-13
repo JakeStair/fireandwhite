@@ -10,7 +10,15 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@types/node": "^22.14.1",
+    "@types/react": "^19.1.1",
+    "@types/react-dom": "^19.1.2",
     "express": "^5.1.0",
-    "firebase": "^11.6.0"
+    "firebase": "^11.6.0",
+    "react-router-dom": "^6.30.0",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.3.3"
   }
 }
