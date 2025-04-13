@@ -1,5 +1,5 @@
 import React from 'react';
-import mainGraphic from '../assets/images/maingraphic.png'; // Update path
+import mainGraphic from '../assets/images/maingraphic2.png'; // Update path
 import logo from '../assets/images/fire-logo2.png'; // Your logo with title
 
 const HeroSection = () => {
