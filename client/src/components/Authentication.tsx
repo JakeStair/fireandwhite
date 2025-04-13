@@ -10,9 +10,9 @@ const Authentication = () => {
   const handleRegister = async () => {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      console.log('User registered:', userCredential);
+      console.log('User is all signed up:', userCredential);
     } catch (error) {
-      console.error('Error registering user:', error);
+      console.error('Oof, there was an error signing up user:', error);
     }
   };
 
@@ -30,7 +30,7 @@ const Authentication = () => {
         onChange={(e) => setPassword(e.target.value)}
         placeholder="Password"
       />
-      <button onClick={handleRegister}>Register</button>
+      <button onClick={handleRegister}>Sign Up</button>
     </div>
   );
 };
