@@ -1,0 +1,39 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+/* @import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities"; */
+
+@import url('https://fonts.googleapis.com/css2?family=Genty&display=swap');
+@import "tailwindcss";
+
+.bg-skyblue {
+    background-color: #38B6FF;
+}
+@font-face {
+    font-family: "Genty Regular";
+    src: url('/assets/GentyDemo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.custom{
+    font-family: "MyCustomFont", sans-serif;
+}
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+  }
+  
+  .hover\:animate-wiggle:hover {
+    animation: wiggle 0.5s ease-in-out infinite;
+  }
+/* 
+@theme {
+    --breakpoint-xs: 30rem;
+    --breakpoint-2xl: 100rem;
+    --breakpoint-3xl: 120rem;
+  } */

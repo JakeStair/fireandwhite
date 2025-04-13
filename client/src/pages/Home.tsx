@@ -1,14 +1,11 @@
 import React from 'react';
-import Layout from '../components/Layout';
+import HeroSection from '../components/Hero'
 
 const Home = () => {
     return (
-        <Layout>
-            <div>
-                <h1>Coming Soon!</h1>
-                <p>Things are gonna get crazy!</p>
-            </div>
-        </Layout>
+        <div>
+           <HeroSection />
+        </div>
     );
 };
 
