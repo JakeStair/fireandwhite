@@ -14,6 +14,7 @@ const HeroSection = () => {
         </div>
 
         {/* Buttons */}
+        <div>Listen to some of our episodes here</div>
         <div className="flex justify-center md:justify-start space-x-4">
           <a href="https://open.spotify.com/show/5CNtyoJ8vP9plKDmg3jVhv" target="_blank" className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
             Spotify
