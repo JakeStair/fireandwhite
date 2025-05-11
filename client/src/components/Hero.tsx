@@ -1,21 +1,29 @@
 import React from 'react';
 import mainGraphic from '../assets/images/maingraphic2.png'; // Update path
 import logo from '../assets/images/fire-logo2.png'; // Your logo with title
+import desktopImage from '../assets/images/desktop-p.png'
+import mobileImage from '../assets/images/mobile-p.png'
+
 
 const HeroSection = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between px-6 py-16 max-w-7xl mx-auto">
-      {/* Left side content */}
-      <div className="md:w-1/2 space-y-6 text-center md:text-left">
-        {/* Logo + Coming Soon */}
-        <div className="flex items-center justify-center md:justify-start space-x-4">
-          <img src={logo} alt="Fire and White Logo" className="h-30" />
-          {/* <span className="text-2xl font-semibold text-white">Coming Soon</span> */}
-        </div>
+    <div>
+      <section className='flex flex-col px-4'>
+    <picture className='mt-8'>
+      {/* Desktop Image */}
+      <source media="(min-width: 720px)" srcSet={desktopImage} />
+      {/* Mobile Image */}
+      <img 
+        className='w-full h-auto rounded-2xl' 
+        src={mobileImage}
+        alt="Responsive Image"
+      />
+    </picture>
+  </section>
 
-        {/* Buttons */}
-        <div className="text-white">Find our episodes here!</div>
-        <div className="flex justify-center md:justify-start space-x-4">
+      <section className="flex flex-col items-center justify-between px-6 mt-5 max-w-7xl mx-auto">
+
+        <div className="flex justify-center space-x-4">
           <a href="https://open.spotify.com/show/5CNtyoJ8vP9plKDmg3jVhv" target="_blank" className="bg-orange-400 text-white px-4 py-2 rounded-lg hover:bg-white hover:text-orange-400">
             Spotify
           </a>
@@ -23,21 +31,19 @@ const HeroSection = () => {
             Apple
           </a>
           <a href="https://www.pandora.com/podcast/fire-and-white/PC:1001085627" className="bg-orange-400 text-white px-4 py-2 rounded-lg hover:bg-white hover:text-orange-400">
-          Pandora
+            Pandora
           </a>
         </div>
 
-        {/* Email */}
-        <p className="text-sm text-white">
-          Contact: <a href="mailto:admin@fireandwhite.com" className="underline">admin@fireandwhite.com</a>
-        </p>
-      </div>
 
-      {/* Right side graphic */}
-      <div className="md:w-1/2 mt-10 md:mt-0">
-        <img src={mainGraphic} alt="Fire and White graphic" />
-      </div>
-    </section>
+        <p className="text-sm text-white mt-5 mb-5">
+          Say Hello! <a href="mailto:admin@fireandwhite.com" className="underline hover:text-orange-400">
+            admin@fireandwhite.com
+            </a>
+        </p>
+
+      </section >
+    </div>
   );
 };
 
