@@ -7,3 +7,5 @@ const Episodes = () => {
         </section>
     );
 };
+
+export default Episodes;

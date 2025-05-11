@@ -10,25 +10,25 @@ const HeroSection = () => {
         {/* Logo + Coming Soon */}
         <div className="flex items-center justify-center md:justify-start space-x-4">
           <img src={logo} alt="Fire and White Logo" className="h-30" />
-          <span className="text-2xl font-semibold text-gray-800">Coming Soon</span>
+          {/* <span className="text-2xl font-semibold text-white">Coming Soon</span> */}
         </div>
 
         {/* Buttons */}
-        <div>Listen to some of our episodes here</div>
+        <div className="text-white">Find our episodes here!</div>
         <div className="flex justify-center md:justify-start space-x-4">
-          <a href="https://open.spotify.com/show/5CNtyoJ8vP9plKDmg3jVhv" target="_blank" className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+          <a href="https://open.spotify.com/show/5CNtyoJ8vP9plKDmg3jVhv" target="_blank" className="bg-orange-400 text-white px-4 py-2 rounded-lg hover:bg-white hover:text-orange-400">
             Spotify
           </a>
-          <a href="https://podcasts.apple.com/us/podcast/fire-white/id1733507614" target="_blank" className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-900">
+          <a href="https://podcasts.apple.com/us/podcast/fire-white/id1733507614" target="_blank" className="bg-orange-400 text-white px-4 py-2 rounded-lg hover:bg-white hover:text-orange-400">
             Apple
           </a>
-          <a href="https://www.pandora.com/podcast/fire-and-white/PC:1001085627" className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-1100">
+          <a href="https://www.pandora.com/podcast/fire-and-white/PC:1001085627" className="bg-orange-400 text-white px-4 py-2 rounded-lg hover:bg-white hover:text-orange-400">
           Pandora
           </a>
         </div>
 
         {/* Email */}
-        <p className="text-sm text-gray-600">
+        <p className="text-sm text-white">
           Contact: <a href="mailto:admin@fireandwhite.com" className="underline">admin@fireandwhite.com</a>
         </p>
       </div>
