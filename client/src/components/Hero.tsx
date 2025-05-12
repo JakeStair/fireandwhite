@@ -8,18 +8,20 @@ import mobileImage from '../assets/images/mobile-p.png'
 const HeroSection = () => {
   return (
     <div>
-      <section className='flex flex-col px-4'>
+      
+
+      {/* <section className='flex flex-col px-4'>
     <picture className='mt-8'>
-      {/* Desktop Image */}
+
       <source media="(min-width: 720px)" srcSet={desktopImage} />
-      {/* Mobile Image */}
+
       <img 
         className='w-full h-auto rounded-2xl' 
         src={mobileImage}
         alt="Responsive Image"
       />
     </picture>
-  </section>
+  </section> */}
 
       <section className="flex flex-col items-center justify-between px-6 mt-5 max-w-7xl mx-auto">
 

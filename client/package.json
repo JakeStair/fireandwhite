@@ -17,6 +17,8 @@
     "react-multi-carousel": "^2.8.6",
     "react-router-dom": "^6.30.0",
     "react-scripts": "5.0.1",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1",
     "tailwind": "^4.0.0",
     "typescript": "^5.8.3",
     "web-vitals": "^2.1.4"
@@ -44,5 +46,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-slick": "^0.23.13"
   }
 }
