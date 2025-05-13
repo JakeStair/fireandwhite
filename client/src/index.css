@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Enlarge and tighten spacing of dots */
+.slick-dots li {
+  margin: 0 4px;
+}
+
+.slick-dots li button:before {
+  font-size: 16px; /* default is 6px, this makes them bigger */
+  color: #fff;     /* optional: match your theme */
+  opacity: 0.6;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #fff;
+}
