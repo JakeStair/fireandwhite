@@ -27,7 +27,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -49,7 +48,6 @@
     ]
   },
   "devDependencies": {
-    "@types/react-slick": "^0.23.13",
-    "jest": "^29.7.0"
+    "@types/react-slick": "^0.23.13"
   }
 }
