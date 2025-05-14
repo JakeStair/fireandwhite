@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 // import wordMark from '../assets/images/wordmark.png';
 import logo from '../assets/images/fire-logo2.png'
 import wordMark from '../assets/images/wordmark.png'
+import logo2 from '../assets/images/logo-navbar.png'
 
 
 const CustomNavbar: React.FC = () => {
@@ -16,23 +17,15 @@ const CustomNavbar: React.FC = () => {
 
     return (
 
-        <nav className="bg-[#484848] shadow-lg">
+        <nav className="bg-[#484848] shadow-lg py-2">
             {/* Navbar Links */}
-            <div className="flex ">
+            <div className="flex justify-center items-center w-full">
                 <Link to="/" className="">
                     <img
-                        src={logo}
+                        src={logo2}
                         alt="Fire and White"
-                        className="h-[90px]"
+                        className="h-[70px] flex justify-center"
                     />
-                </Link>
-
-                <Link to="/" className="mt-7">
-                <img 
-                src={wordMark}
-                alt="Fire and White Word Mark"
-                className="h-[30px]"
-                />
                 </Link>
 
                 {/* <a href="mailto:admin@fireandwhite.com" className="text-gray-700 hover:text-blue-600">admin@fireandwhite.com</a> */}
