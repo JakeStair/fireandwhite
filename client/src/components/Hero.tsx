@@ -35,90 +35,90 @@ const HeroSection = () => {
 
         <div className="flex flex-wrap justify-center gap-3 mt-5 max-w-7xl mx-auto">
           <a
-            href="https://www.iheart.com/podcast/269-fire-white-154929696/"
-            className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12 "
+            href="https://open.spotify.com/show/5CNtyoJ8vP9plKDmg3jVhv"
+            target="_blank" rel="noopener noreferrer" className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12 "
           >
             Spotify
           </a>
           <a
-            href="https://www.iheart.com/podcast/269-fire-white-154929696/"
-            className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
+            href="https://podcasts.apple.com/us/podcast/fire-white/id1733507614"
+            target="_blank" rel="noopener noreferrer" className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
           >
             Apple Podcasts
           </a>
           <a
-            href="https://www.iheart.com/podcast/269-fire-white-154929696/"
-            className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12 max-w-full"
+            href="https://www.pandora.com/podcast/fire-and-white/PC:1001085627"
+            target="_blank" rel="noopener noreferrer" className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12 max-w-full"
           >
             Pandora
           </a>
           <a
-            href="https://www.iheart.com/podcast/269-fire-white-154929696/"
-            className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
+            href="https://music.amazon.com/podcasts/57a4f76c-977b-4330-9dfb-f599a8c8bf31/fire-white"
+            target="_blank" rel="noopener noreferrer" className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
           >
             Amazon Music
           </a>
           <a
             href="https://www.iheart.com/podcast/269-fire-white-154929696/"
-            className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
+            target="_blank" rel="noopener noreferrer" className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
           >
             iHeart Radio
           </a>
           <a
             href="https://podcastindex.org/podcast/6810945"
-            className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
+            target="_blank" rel="noopener noreferrer" className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
           >
             Podcast Index
           </a>
 
-          <a
-            href="https://www.youtube.com/channel/UCKqUybNv3LEeorBOrkV2rMQ"
-            className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
+          {/* <a
+            href="https://www.youtube.com/playlist?list=PLya6yvUQtv3xWhNP9PFiseI3wJqlMwTO8"
+            target="_blank" rel="noopener noreferrer" className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
           >
             YouTube
-          </a>
+          </a> */}
 
           <a
             href="https://podcastaddict.com/podcast/fire-white/4984011"
-            className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
+            target="_blank" rel="noopener noreferrer" className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
           >
             Podcast Addict
           </a>
 
           <a
             href="https://www.podchaser.com/podcasts/fire-white-5636456"
-            className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
+            target="_blank" rel="noopener noreferrer" className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
           >
             Podchaser
           </a>
 
           <a
             href="https://play.pocketcasts.com/podcasts/a9f7f040-b7d3-013c-c515-0aec82e01c75"
-            className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
+            target="_blank" rel="noopener noreferrer" className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
           >
             Pocket Casts
           </a>
 
           <a
             href="https://www.deezer.com/us/show/1000716222"
-            className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
+            target="_blank" rel="noopener noreferrer" className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
           >
             Deezer
           </a>
 
           <a
             href="https://www.listennotes.com/podcasts/fire-white-fire-white-qVf8La64Zl3/"
-            className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
+            target="_blank" rel="noopener noreferrer" className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
           >
             Listen Notes
           </a>
 
-          {/* <a
+          <a
             href="https://player.fm/series/fire-white"
-            className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
+           target="_blank" rel="noopener noreferrer"  className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
           >
             Player FM
-          </a> */}
+          </a>
 
         </div>
 
