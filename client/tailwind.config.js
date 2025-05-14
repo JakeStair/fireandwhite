@@ -6,6 +6,9 @@ module.exports = {
       backgroundColor: {
 
       },
+      boxShadow: {
+        'dark': '4px 4px 5px rgba(0, 0, 0, 0.4)',
+      },
     },
   },
  

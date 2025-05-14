@@ -8,6 +8,7 @@ import CarouselSlider from '../components/SlickSlider'
 const Home = () => {
     return (
         <div className="bg-[#4f4f4f]">
+            {/* <h1>Latest Episodes</h1> */}
             {/* <ErrorBoundary>
                 <Carousel />
             </ErrorBoundary> */}

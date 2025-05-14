@@ -1,19 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import comets from "../assets/images/comets.png";
 import tamika from "../assets/images/tamika.png";
 import lisa from "../assets/images/lisa.png";
-import trailer from '../assets/images/trailer.png'
-
-
-declare module "*.png";
+import trailer from "../assets/images/trailer.png";
 
 const CarouselSlider: React.FC = () => {
+  const sliderRef = useRef<Slider>(null);
+
   const settings = {
-    dots: true,
+    dots: false,
+    arrows: false, 
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -22,61 +21,48 @@ const CarouselSlider: React.FC = () => {
     centerPadding: "20px",
     swipe: true,
     touchMove: true,
-    initialSlide: 0,
+    initialSlide: 1,
     responsive: [
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
         },
       },
     ],
   };
 
-
   return (
-    <Slider {...settings} className="">
-      <div className="px-4 mt-8">
-        <div className="aspect-w-4 aspect-h-3">
-          <a href="https://fireandwhitepodcast.buzzsprout.com/2221953/episodes/17052500-97-comets-dawn-of-a-dynasty" target="_blank" rel="noopener noreferrer">
+    <div className="relative">
+ 
+      <Slider ref={sliderRef} {...settings}>
+        {[comets, lisa, tamika, trailer].map((img, index) => (
+          <div key={index} className="px-2 mt-11">
             <img
-              src={comets}
-              alt="'97 Comets"
-              className="w-full h-full object-contain rounded-lg border-2 border-gray-500 shadow-lg transform transition duration-300 hover:scale-105"
+              src={img}
+              alt={`Slide ${index}`}
+              className="w-full h-full object-contain rounded-lg border-2 border-gray-500 shadow-lg transition duration-300 hover:scale-105"
             />
-          </a>
-        </div>
+          </div>
+        ))}
+      </Slider>
+
+      <div className="flex justify-center mt-4 space-x-8">
+        <button
+          onClick={() => sliderRef.current?.slickPrev()}
+          className=" text-white rounded-full shadow-dark p-2 px-4"
+        >
+          ⏴
+        </button>
+        <button
+          onClick={() => sliderRef.current?.slickNext()}
+          className=" text-white rounded-full shadow-dark p-2 px-4"
+        >
+          ⏵
+        </button>
       </div>
-      <div className="px-4 mt-8">
-        <a href="https://fireandwhitepodcast.buzzsprout.com/2221953/episodes/15524368-lisa-leslie" target="_blank" rel="noopener noreferrer">
-          <img
-            src={lisa}
-            alt="Lisa Leslie"
-            className="w-full h-full object-contain rounded-lg border-2 border-gray-500 shadow-lg transition duration-300 hover:scale-105"
-          />
-        </a>
-      </div >
-      <div className="px-4 mt-8">
-        <a href="https://fireandwhitepodcast.buzzsprout.com/2221953/episodes/14897211-tamika-catchings" target="_blank" rel="noopener noreferrer">
-          <img
-            src={tamika}
-            alt="Tamika Catchings"
-            className="w-full h-full object-contain rounded-lg border-2 border-gray-500 shadow-lg transition duration-300 hover:scale-105"
-          />
-        </a>
-      </div>
-      <div className="px-4 mt-8">
-        <a href="https://fireandwhitepodcast.buzzsprout.com/2221953/episodes/14637220-welcome-to-fire-white" target="_blank" rel="noopener noreferrer">
-          <img
-            src={trailer}
-            alt="Trailer"
-            className="w-full h-full object-contain rounded-lg border-2 border-gray-500 shadow-lg transition duration-300 hover:scale-105"
-          />
-        </a>
-      </div>
-    </Slider>
+    </div>
   );
 };
 
 export default CarouselSlider;
-
