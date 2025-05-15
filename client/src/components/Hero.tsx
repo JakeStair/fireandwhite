@@ -123,7 +123,7 @@ const HeroSection = () => {
         </div>
 
 
-        <p className="text-md text-white mt-5 mb-5">
+        <p className="text-md text-white mt-5 mb-[85px]">
           Say Hello! <a href="mailto:admin@fireandwhite.com" className="underline hover:text-orange-400">
             admin@fireandwhite.com
           </a>

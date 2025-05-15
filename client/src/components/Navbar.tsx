@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import wordMark from '../assets/images/wordmark.png';
-import logo from '../assets/images/fire-logo2.png'
-import wordMark from '../assets/images/wordmark.png'
+// import logo from '../assets/images/fire-logo2.png'
+// import wordMark from '../assets/images/wordmark.png'
 import logo2 from '../assets/images/logo-navbar.png'
 
 
