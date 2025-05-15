@@ -4,14 +4,18 @@
     "module": "ESNext",
     "lib": ["dom", "esnext"],
     "allowJs": true,
-    "jsx": "react",
+    "jsx": "react-jsx",             // better for React 17+
     "skipLibCheck": true,
     "strict": true,
     "moduleResolution": "Node",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    
+    // Add these for Jest compatibility
+    "types": ["jest", "node"],
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "src/setupTests.ts"]
 }

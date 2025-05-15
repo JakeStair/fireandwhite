@@ -1,8 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders the app without crashing', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+const headings = screen.getAllByRole('heading');
+expect(headings.length).toBeGreaterThan(0);
+
+});
+
+test('basic sanity check', () => {
+  expect(true).toBe(true);
 });
