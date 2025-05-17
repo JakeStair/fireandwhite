@@ -6,6 +6,7 @@ import comets from "../assets/images/comets.png";
 import tamika from "../assets/images/tamika.png";
 import lisa from "../assets/images/lisa.png";
 import trailer from "../assets/images/trailer.png";
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
 const CarouselSlider: React.FC = () => {
   const sliderRef = useRef<Slider>(null);
@@ -59,15 +60,15 @@ const CarouselSlider: React.FC = () => {
         <button
           onClick={() => sliderRef.current?.slickPrev()}
           className="text-white rounded-full shadow-dark p-2 px-4"
+    aria-label="Previous Slide"
         >
-          ⏴
-        </button>
+{React.createElement(FaChevronLeft as React.ElementType, { size: 16 })}        </button>
         <button
           onClick={() => sliderRef.current?.slickNext()}
           className="text-white rounded-full shadow-dark p-2 px-4"
+    aria-label="Next Slide"
         >
-          ⏵
-        </button>
+{React.createElement(FaChevronRight as React.ElementType, { size: 16 })}        </button>
       </div>
     </div>
   );
