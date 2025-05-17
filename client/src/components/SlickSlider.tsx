@@ -22,12 +22,12 @@ const CarouselSlider: React.FC = () => {
     centerPadding: "20px",
     swipe: true,
     touchMove: true,
-    initialSlide: 1,
+    initialSlide: 0,
     responsive: [
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 0,
+          slidesToShow: 1,
         },
       },
     ],
