@@ -3,6 +3,7 @@ import React from 'react';
 // import logo from '../assets/images/fire-logo2.png'; // Your logo with title
 // import desktopImage from '../assets/images/desktop-p.png'
 // import mobileImage from '../assets/images/mobile-p.png'
+import Pat from '../assets/images/pat-transparent.png'
 
 
 const HeroSection = () => {
@@ -31,7 +32,7 @@ const HeroSection = () => {
         <h1></h1>
       </section> */}
 
-      <section className="flex flex-col items-center justify-between px-6 mt-0 max-w-7xl mx-auto">
+      <section className="flex flex-col items-center justify-between px- mt-0 max-w-7xl mx-auto">
 
         <div className="flex flex-wrap justify-center gap-3 mt-5 max-w-7xl mx-auto">
           <a
@@ -115,13 +116,33 @@ const HeroSection = () => {
 
           <a
             href="https://player.fm/series/fire-white"
-           target="_blank" rel="noopener noreferrer"  className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
+            target="_blank" rel="noopener noreferrer" className="bg-[#5e5e5e] text-white px-4 py-2 rounded-lg hover:bg-orange-400 hover:text-white whitespace-nowrap flex items-center justify-center h-12"
           >
             Player FM
           </a>
 
         </div>
+        <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 mt-12 px-6 md:px-12">
+          <div className="text-white md:w-1/2 text-center md:text-left">
+            <p className="text-lg mb-4">
+              “Well, it can’t get any worse; you can still win this game. Take it one possession at a time. I’ll tell you this much: if we’re going down, we’re going down fighting.”
+            </p>
+            <a
+              href="https://fireandwhitepodcast.buzzsprout.com/2221953/episodes/14897211-tamika-catchings"
+              className="inline-block bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition"
+            >
+              Hear More!
+            </a>
+          </div>
+          <div className="md:w-1/2 w-full flex justify-center md:mb-0 -ml-4 sm:-ml-[90px] md:ml-0">
+            <img
+              src={Pat}
+              alt="Pat Summitt"
+              className="w-full max-w-[300px] md:max-w-none md:h-[400px] object-contain"
+            />
 
+          </div>
+        </div>
 
         <p className="text-md text-white mt-5 mb-[85px]">
           Say Hello! <a href="mailto:admin@fireandwhite.com" className="underline hover:text-orange-400">

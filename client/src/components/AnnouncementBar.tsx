@@ -1,11 +1,11 @@
 import React from 'react';
 
 const messages = [
-  '🎉 Big news! Dawn of a Dynasty is Out Now!',
+  '🎉 Big news! Our newest episode, Dawn of a Dynasty is out now!',
+  '🏀 Celebrating the beginning of the greatest WNBA dynasty ~ the 4x WNBA Champs: The Comets',
   '🎧 Listen on Your Favorite Podcast Platform!',
-  '🔥 Subscribe to Fire & White now!',
-  '🏀 Celebrating 4x WNBA Champs: The Comets',
   '📢 Interviews coming soon – stay tuned!',
+  '🔥 Subscribe to Fire & White now!',
 ];
 
 const AnnouncementBar: React.FC = () => {
