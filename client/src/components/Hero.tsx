@@ -123,15 +123,16 @@ const HeroSection = () => {
           </a>
 
         </div>
-<div className="relative w-full mt-[55px]">
-  <a href="https://www.buzzsprout.com/admin/2221953/episodes/14897211-tamika-catchings">
-  <img
-    src={tamika}
-    alt="Tamika Catchings Layup"
-    className="w-full h-auto object-cover"
-  />
-  </a>
-  {/* <p className="
+      </section >
+      <div className="relative w-full mt-[55px]">
+        <a href="https://www.buzzsprout.com/admin/2221953/episodes/14897211-tamika-catchings">
+          <img
+            src={tamika}
+            alt="Tamika Catchings Layup"
+            className="w-full h-auto object-cover"
+          />
+        </a>
+        {/* <p className="
     absolute 
     top-1/2 
     -translate-y-1/2 
@@ -147,10 +148,10 @@ const HeroSection = () => {
   ">
     Adversity wasn’t the end. <br />It was the blueprint.”
   </p> */}
-</div>
+      </div>
 
 
-        {/* <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 mt-12 px-6 md:px-12">
+      {/* <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 mt-12 px-6 md:px-12">
           <div className="text-white md:w-1/2 text-center md:text-left">
             <p className="text-lg mb-4">
               “Well, it can’t get any worse; you can still win this game. Take it one possession at a time. I’ll tell you this much: if we’re going down, we’re going down fighting.”
@@ -172,27 +173,26 @@ const HeroSection = () => {
           </div>
         </div> */}
 
-<section className="text-white flex flex-col items-center justify-center text-center mt-12 mb-4">
+      <section className="text-white flex flex-col items-center justify-center text-center mt-12 mb-4">
         <h1 className="text-5xl font-bold mb-1">Not Just a Podcast</h1>
         <p className="mx-12">It's a celebration of resilience, excellence, and the remarkable women who have shaped the game. Join us as we honor their stories and the profound impact of women in sports.</p>
       </section>
 
       <section>
         <a href="https://www.buzzsprout.com/admin/2221953/episodes">
-        <img 
-        src={logo}
-        alt="Fire & White Logo"
-        />
+          <img
+            src={logo}
+            alt="Fire & White Logo"
+          />
         </a>
       </section>
 
-        {/* <p className="text-md text-white mt- mb-[85px]">
+      {/* <p className="text-md text-white mt- mb-[85px]">
           Say Hello! <a href="mailto:admin@fireandwhite.com" className="underline hover:text-orange-400">
             admin@fireandwhite.com
           </a>
         </p> */}
 
-      </section >
     </div>
   );
 };
