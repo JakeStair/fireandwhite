@@ -1,10 +1,11 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './components/Layout';
-import Login from './components/Login';
-import Register from './components/Authentication';
+// import Login from './components/Login';
+// import Register from './components/Authentication';
 import Home from './pages/Home';
 import Episodes from './pages/Episodes';
+import About from './pages/About';
 
 // Remove the unsupported 'v7_startTransition' property
 const router = createBrowserRouter(
@@ -14,8 +15,9 @@ const router = createBrowserRouter(
       children: [
         { path: '/', element: <Home /> },
         { path: '/episodes', element: <Episodes /> },
-        { path: '/login', element: <Login /> },
-        { path: '/signup', element: <Register /> },
+        { path: '/about', element: <About /> }
+        // { path: '/login', element: <Login /> },
+        // { path: '/signup', element: <Register /> },
       ],
     },
   ],

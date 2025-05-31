@@ -13,7 +13,7 @@ const AnnouncementBar: React.FC = () => {
   const repeatedMessages = [...messages, ...messages];
 
   return (
-    <div className="marquee-container py-2 text-sm font-semibold">
+    <div className="marquee-container py-2 text-lg font-semibold">
       <div className="marquee-content">
         {repeatedMessages.map((msg, idx) => (
           <span key={idx} className="mx-8 inline-block">

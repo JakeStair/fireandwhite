@@ -3,8 +3,9 @@ import React from 'react';
 import logo from '../assets/images/fire-logo2.png';
 // import desktopImage from '../assets/images/desktop-p.png'
 // import mobileImage from '../assets/images/mobile-p.png'
-import Pat from '../assets/images/pat-transparent.png'
+// import Pat from '../assets/images/pat-transparent.png'
 import tamika from '../assets/images/tamika-banner.png'
+import tamikaDesktop from '../assets/images/tamika-banner-desktop.png'
 
 
 const HeroSection = () => {
@@ -33,7 +34,7 @@ const HeroSection = () => {
         <h1></h1>
       </section> */}
 
-      <section className="flex flex-col items-center justify-between px- mt-0 max-w-7xl mx-auto">
+      <section className="flex flex-col items-center justify-between px- mt-0 max-w-7xl mx-auto py-5">
 
         <div className="flex flex-wrap justify-center gap-3 mt-5 max-w-7xl mx-auto">
           <a
@@ -126,11 +127,18 @@ const HeroSection = () => {
       </section >
       <div className="relative w-full mt-[55px]">
         <a href="https://www.buzzsprout.com/admin/2221953/episodes/14897211-tamika-catchings">
+          <picture>
+            <source
+            media="(min-width: 1100px)"
+            srcSet={tamikaDesktop}
+            // alt="Tamika Catchings Layup - Desktop View"
+            />
           <img
-            src={tamika}
+            srcSet={tamika}
             alt="Tamika Catchings Layup"
             className="w-full h-auto object-cover"
-          />
+            />
+            </picture>
         </a>
         {/* <p className="
     absolute 
@@ -173,19 +181,19 @@ const HeroSection = () => {
           </div>
         </div> */}
 
-      <section className="text-white flex flex-col items-center justify-center text-center mt-12 mb-4">
+      <section className="text-white flex flex-col items-center justify-center text-center mt-0 py-12">
         <h1 className="text-5xl font-bold mb-1">Not Just a Podcast</h1>
-        <p className="mx-12">It's a celebration of resilience, excellence, and the remarkable women who have shaped the game. Join us as we honor their stories and the profound impact of women in sports.</p>
+        <p className="mx-4 md:mx-auto max-w-lg md:max-w-2xl">It's a celebration of resilience, excellence, and the remarkable women who have shaped the game. Join us as we honor their stories and the profound impact of women in sports.</p>
       </section>
 
-      <section>
+      {/* <section>
         <a href="https://www.buzzsprout.com/admin/2221953/episodes">
           <img
             src={logo}
             alt="Fire & White Logo"
           />
         </a>
-      </section>
+      </section> */}
 
       {/* <p className="text-md text-white mt- mb-[85px]">
           Say Hello! <a href="mailto:admin@fireandwhite.com" className="underline hover:text-orange-400">
