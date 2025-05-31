@@ -125,7 +125,7 @@ const HeroSection = () => {
 
         </div>
       </section >
-      <div className="relative w-full mt-[55px]">
+      <div className="relative w-full mt-[35px]">
         <a href="https://www.buzzsprout.com/admin/2221953/episodes/14897211-tamika-catchings">
           <picture>
             <source
