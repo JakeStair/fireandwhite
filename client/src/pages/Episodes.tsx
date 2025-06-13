@@ -42,14 +42,14 @@ const EpisodeCard: React.FC<{ episode: Episode; thumbnail: string }> = ({ episod
     />
     <div className="flex flex-col flex-1">
       <h2 className="text-xl font-semibold mb-1">
-        <a
-          href={episode.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:underline"
+        <h1
+          // href={episode.link}
+          // target="_blank"
+          // rel="noopener noreferrer"
+          // className="hover:underline"
         >
           {episode.title}
-        </a>
+        </h1>
       </h2>
       <time className="mb-3 text-white" dateTime={new Date(episode.pubDate).toISOString()}>
         {new Date(episode.pubDate).toLocaleDateString()}
@@ -82,7 +82,7 @@ const Episodes = () => {
 
   useEffect(() => {
     // Simulate initial loading screen (2 seconds)
-    const timer = setTimeout(() => setIsLoading(false), 2000);
+    const timer = setTimeout(() => setIsLoading(false), 3500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -153,7 +153,7 @@ const Episodes = () => {
 
   return (
     <main className="bg-[#4f4f4f] text-white py-16 px-6 flex flex-col items-center min-h-screen">
-      {/* ... your existing UI here ... */}
+
       <section className="flex flex-col px-4 max-w-5xl mx-auto">
         <picture className="mb-4">
           <source media="(min-width: 720px)" srcSet={desktopImage} />
