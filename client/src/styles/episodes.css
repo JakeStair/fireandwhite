@@ -1,0 +1,20 @@
+/* Target the small player iframe wrappers */
+#buzzsprout-small-player-limit-5 iframe {
+  background-color: rgba(255, 255, 255, 0.05); /* soft dark overlay */
+  border: 1px solid #999;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Add hover effect for interactivity */
+#buzzsprout-small-player-limit-5 iframe:hover {
+  transform: scale(1.01);
+}
+
+/* Add vertical spacing between iframes */
+#buzzsprout-small-player-limit-5 iframe + iframe {
+  margin-top: 2rem;
+}

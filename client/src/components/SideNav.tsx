@@ -23,7 +23,7 @@ const SideNav = ({ isNavOpen, setIsNavOpen }: SideNavProps) => {
 
       <nav className="p-4 flex flex-col space-y-4 text-xl">
 
-        <div className="text-gray-500">Episodes(Coming Soon)</div>
+       <Link className="text-white" to="/episodes" onClick={() => setIsNavOpen(false)}>Episodes</Link>
         <div className="text-gray-500">Blog(Coming Soon)</div>
         {/* <Link className="text-gray-900" to="/blog" onClick={() => setIsNavOpen(false)}>Blog(Coming Soon)</Link> */}
         <div className="text-gray-500">About(Coming Soon)</div>

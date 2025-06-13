@@ -1,6 +1,6 @@
 import React from 'react';
-// import mainGraphic from '../assets/images/maingraphic2.png'; // Update path
-import logo from '../assets/images/fire-logo2.png';
+// // import mainGraphic from '../assets/images/maingraphic2.png'; // Update path
+// import logo from '../assets/images/fire-logo2.png';
 // import desktopImage from '../assets/images/desktop-p.png'
 // import mobileImage from '../assets/images/mobile-p.png'
 // import Pat from '../assets/images/pat-transparent.png'

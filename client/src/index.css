@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Enlarge and tighten spacing of dots */
+/* --- Carousel Dot Styling --- */
 .slick-dots li {
   margin: 0 4px;
 }
 
 .slick-dots li button:before {
-  font-size: 16px; /* default is 6px, this makes them bigger */
-  color: #fff;     /* optional: match your theme */
+  font-size: 16px;
+  color: #fff;
   opacity: 0.6;
 }
 
@@ -18,6 +18,7 @@
   color: #fff;
 }
 
+/* --- Marquee Animation --- */
 @keyframes marquee {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-50%); }
@@ -26,7 +27,7 @@
 .marquee-container {
   overflow: hidden;
   white-space: nowrap;
-  background-color: #ff7f1d; /* Tailwind red-600 */
+  background-color: #ff7f1d;
   color: white;
 }
 
@@ -36,7 +37,97 @@
   animation: marquee 30s linear infinite;
 }
 
-/* Add to index.css if needed */
+/* --- Base Resets --- */
 body {
   overflow-x: hidden;
+}
+
+audio {
+  background-color: #4f4f4f;
+  border-radius: 0.25rem;
+}
+
+/* --- Audio Player Custom Styling --- */
+
+/* Outer container */
+.rhap_container {
+  background-color: transparent !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Main container for play button + progress */
+.rhap_main {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 0 !important;          /* No gap at all */
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+}
+
+/* Play button container */
+.rhap_main-controls {
+  display: flex !important;
+  order: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: auto !important;
+  flex-shrink: 0 !important;
+  background: transparent !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* Play button size & no spacing */
+.rhap_main-controls > button {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 2.5rem !important;  /* 40px wide */
+  height: 2.5rem !important; /* 40px tall */
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* Timeline section */
+.rhap_progress-section {
+  order: 1 !important;
+  flex-grow: 1 !important;
+  flex-shrink: 1 !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  background: transparent !important;
+}
+
+/* Progress bar track */
+.rhap_progress-bar {
+  background-color: #8a8a8a !important;
+  height: 4px !important;
+  border-radius: 2px !important;
+  margin: 0 !important;
+}
+
+/* Progress fill */
+.rhap_progress-filled {
+  background-color: #ff7f1d !important;
+  height: 100% !important;
+}
+
+/* Hide extra UI */
+.rhap_additional-controls,
+.rhap_volume-controls,
+.rhap_volume-container {
+  display: none !important;
+  width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
 }
