@@ -9,6 +9,8 @@ import comets from "../assets/images/comets.png";
 import tamika from "../assets/images/tamika.png";
 import lisa from "../assets/images/lisa.png";
 import trailer from "../assets/images/trailer.png";
+import logo from '../assets/images/fire-logo2.png';
+
 
 type Episode = {
   title: string;
@@ -64,7 +66,6 @@ const EpisodeCard: React.FC<{ episode: Episode; thumbnail: string }> = ({ episod
         aria-label={`Play episode: ${episode.title}`}
       />
 
-      {/* Optional description */}
       {/* {episode.contentSnippet && (
         <p className="mt-3 text-gray-400">{episode.contentSnippet}</p>
       )} */}
@@ -73,9 +74,17 @@ const EpisodeCard: React.FC<{ episode: Episode; thumbnail: string }> = ({ episod
 );
 
 const Episodes = () => {
+  // ALL hooks at the top level, no conditionals before these!
+  const [isLoading, setIsLoading] = useState(true);  // your initial loading screen state
   const [episodes, setEpisodes] = useState<Episode[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);      // loading for RSS fetch
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Simulate initial loading screen (2 seconds)
+    const timer = setTimeout(() => setIsLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const fetchEpisodes = async () => {
     setLoading(true);
@@ -109,11 +118,26 @@ const Episodes = () => {
     }
   };
 
-  React.useEffect(() => {
-    fetchEpisodes();
-  }, []);
+  // Fetch episodes when isLoading ends (initial screen done)
+  useEffect(() => {
+    if (!isLoading) {
+      fetchEpisodes();
+    }
+  }, [isLoading]);
 
-  if (loading) return <LoadingSpinner />;
+  if (isLoading) {
+    // Initial 2 second loading screen (logo)
+    return (
+      <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#4f4f4f]">
+        <div className="text-white text-3xl animate-pulse">
+          <img src={logo} alt="Fire and White Logo" className="w-auto h-[150px]" />
+        </div>
+      </div>
+    );
+  }
+
+  if (loading) return <LoadingSpinner />;  // RSS feed loading spinner
+
   if (error)
     return (
       <div className="text-red-500 text-center py-10">
@@ -129,6 +153,7 @@ const Episodes = () => {
 
   return (
     <main className="bg-[#4f4f4f] text-white py-16 px-6 flex flex-col items-center min-h-screen">
+      {/* ... your existing UI here ... */}
       <section className="flex flex-col px-4 max-w-5xl mx-auto">
         <picture className="mb-4">
           <source media="(min-width: 720px)" srcSet={desktopImage} />
@@ -148,5 +173,6 @@ const Episodes = () => {
     </main>
   );
 };
+
 
 export default Episodes;
