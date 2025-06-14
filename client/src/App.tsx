@@ -6,6 +6,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import Episodes from './pages/Episodes';
 import About from './pages/About';
+import EpisodeFeature from './pages/EpisodeFeature';
 
 // Remove the unsupported 'v7_startTransition' property
 const router = createBrowserRouter(
@@ -15,6 +16,7 @@ const router = createBrowserRouter(
       children: [
         { path: '/', element: <Home /> },
         { path: '/episodes', element: <Episodes /> },
+        { path: '/episodes/:id', element: <EpisodeFeature /> },
         { path: '/about', element: <About /> }
         // { path: '/login', element: <Login /> },
         // { path: '/signup', element: <Register /> },
@@ -22,8 +24,6 @@ const router = createBrowserRouter(
     },
   ],
   {
-    // You can keep v7_relativeSplatPath if it is supported by your version
-    // Otherwise, you can remove the 'future' property entirely
     future: {
       v7_relativeSplatPath: true,
     },

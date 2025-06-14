@@ -12,7 +12,7 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "isolatedModules": true,
-    
+    "resolveJsonModule": true,
     // Add these for Jest compatibility
     "types": ["jest", "node"],
     "allowSyntheticDefaultImports": true

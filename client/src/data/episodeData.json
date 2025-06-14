@@ -1,0 +1,30 @@
+[
+    {
+        "id": "97-Comets",
+        "title": "'97 Comets | Dawn of a Dynasty",
+        "audioUrl": "https://www.buzzsprout.com/2221953/episodes/17052500-97-comets-dawn-of-a-dynasty.mp3?download=true",
+        "description": "This game represented so much more than just a win... [etc.]",
+        "image": "comets.png"
+    },
+    {
+        "id": "lisa-leslie",
+        "title": "Lisa Leslie | Above the Rim",
+        "audioUrl": "https://www.buzzsprout.com/2221953/episodes/15524368-lisa-leslie-above-the-rim.mp3?download=true",
+        "description": "Lisa's journey is one of trailblazing moments and unmatched excellence.",
+        "image": "lisa.png"
+    },
+    {
+        "id": "tamika-catchings",
+        "title": "Tamika Catchings | Adversity wasn't the End, It was the Blueprint.",
+        "audioUrl": "https://www.buzzsprout.com/2221953/episodes/14897211-tamika-catchings.mp3?download=true",
+        "description": "Tamika Catchings, a basketball legend who blazed a trail of excellence from her days at the University of Tennessee to her iconic career in the WNBA.",
+        "image": "tamika.png"
+    },
+        {
+        "id": "trailer",
+        "title": "Welcome to Fire & White",
+        "audioUrl": "https://www.buzzsprout.com/2221953/episodes/14637220-welcome-to-fire-white.mp3?download=true",
+        "description": "Embark on a journey through the rich history of women's basketball as we mark the 28th anniversary of the WNBA.",
+        "image": "trailer.png"
+    }
+]
