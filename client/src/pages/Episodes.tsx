@@ -41,46 +41,85 @@ const LoadingSpinner = () => (
   </div>
 );
 
+// const EpisodeCard: React.FC<{ episode: Episode; thumbnail: string }> = ({ episode, thumbnail }) => {
+//   const id = episode.slug; // use slug instead of encoded link
+
+//   return (
+//     <article className="p-4 rounded-lg bg-[#4f4f4f] shadow-md flex items-start space-x-6 hover:shadow-lg transition-shadow duration-200">
+//       <Link to={/episodes/${id}} className="flex-shrink-0">
+//         <img
+//           src={thumbnail}
+//           alt={Thumbnail for ${episode.title}}
+//           className="w-32 h-32 object-cover rounded-md border border-gray-600"
+//         />
+//       </Link>
+//       <div className="flex flex-col flex-1">
+//         <h2 className="text-xl font-semibold mb-1">
+//           <Link
+//             to={/episodes/${id}}
+//             className="hover:underline"
+//             aria-label={Go to episode page for ${episode.title}}
+//           >
+//             {episode.title}
+//           </Link>
+//         </h2>
+//         <time className="mb-3 text-white" dateTime={new Date(episode.pubDate).toISOString()}>
+//           {new Date(episode.pubDate).toLocaleDateString()}
+//         </time>
+
+//         <AudioPlayer
+//           src={episode.audioUrl}
+//           showJumpControls={false}
+//           customVolumeControls={[]}
+//           customAdditionalControls={[]}
+//           layout="horizontal"
+//           className="rounded bg-[#4f4f4f]"
+//           style={{ boxShadow: 'none' }}
+//           aria-label={Play episode: ${episode.title}}
+//         />
+//       </div>
+//     </article>
+//   );
+// };
+
 const EpisodeCard: React.FC<{ episode: Episode; thumbnail: string }> = ({ episode, thumbnail }) => {
-  const id = episode.slug; // use slug instead of encoded link
+  const id = episode.slug;
 
   return (
-    <article className="p-4 rounded-lg bg-[#4f4f4f] shadow-md flex items-start space-x-6 hover:shadow-lg transition-shadow duration-200">
-      <Link to={`/episodes/${id}`} className="flex-shrink-0">
-        <img
-          src={thumbnail}
-          alt={`Thumbnail for ${episode.title}`}
-          className="w-32 h-32 object-cover rounded-md border border-gray-600"
-        />
-      </Link>
+    <Link
+      to={`/episodes/${id}`}
+      className="block p-4 rounded-lg bg-[#4f4f4f] shadow-md flex items-start space-x-6 hover:shadow-lg transition-shadow duration-200"
+      aria-label={`Go to episode page for ${episode.title}`}
+    >
+      <img
+        src={thumbnail}
+        alt={`Thumbnail for ${episode.title}`}
+        className="w-32 h-32 object-cover rounded-md border border-gray-600 flex-shrink-0"
+      />
       <div className="flex flex-col flex-1">
-        <h2 className="text-xl font-semibold mb-1">
-          <Link
-            to={`/episodes/${id}`}
-            className="hover:underline"
-            aria-label={`Go to episode page for ${episode.title}`}
-          >
-            {episode.title}
-          </Link>
-        </h2>
+        <h2 className="text-xl font-semibold mb-1">{episode.title}</h2>
         <time className="mb-3 text-white" dateTime={new Date(episode.pubDate).toISOString()}>
           {new Date(episode.pubDate).toLocaleDateString()}
         </time>
 
-        <AudioPlayer
-          src={episode.audioUrl}
-          showJumpControls={false}
-          customVolumeControls={[]}
-          customAdditionalControls={[]}
-          layout="horizontal"
-          className="rounded bg-[#4f4f4f]"
-          style={{ boxShadow: 'none' }}
-          aria-label={`Play episode: ${episode.title}`}
-        />
+        {/* We'll hide this on mobile via Tailwind's responsive utilities */}
+        <div className="hidden md:block w-full">
+          <AudioPlayer
+            src={episode.audioUrl}
+            showJumpControls={false}
+            customVolumeControls={[]}
+            customAdditionalControls={[]}
+            layout="horizontal"
+            className="rounded bg-[#4f4f4f]"
+            style={{ boxShadow: 'none' }}
+            aria-label={`Play episode: ${episode.title}`}
+          />
+        </div>
       </div>
-    </article>
+    </Link>
   );
 };
+
 
 const Episodes = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -149,13 +188,13 @@ const Episodes = () => {
 
   if (error)
     return (
-      <div className="text-red-500 text-center py-10">
+      <div className="text-white text-center py-10">
         <p>{error}</p>
         <button
           onClick={fetchEpisodes}
-          className="mt-4 px-4 py-2 bg-red-600 rounded hover:bg-red-700 transition"
+          className="mt-4 px-4 py-2 bg-[#ff7f1d] rounded hover:bg-[#ffb41d] transition"
         >
-          Retry
+          Take Another Shot!
         </button>
       </div>
     );

@@ -6,6 +6,7 @@ import React from 'react';
 // import Pat from '../assets/images/pat-transparent.png'
 import tamika from '../assets/images/tamika-banner.png'
 import tamikaDesktop from '../assets/images/tamika-banner-desktop.png'
+import { Link } from 'react-router-dom';
 
 
 const HeroSection = () => {
@@ -126,60 +127,23 @@ const HeroSection = () => {
         </div>
       </section >
       <div className="relative w-full mt-[35px]">
-        <a href="https://www.buzzsprout.com/admin/2221953/episodes/14897211-tamika-catchings" target="_blank" rel="noopener noreferrer">
-          <picture>
-            <source
-            media="(min-width: 1100px)"
-            srcSet={tamikaDesktop}
-            // alt="Tamika Catchings Layup - Desktop View"
-            />
-          <img
-            srcSet={tamika}
-            alt="Tamika Catchings Layup"
-            className="w-full h-auto object-cover"
-            />
-            </picture>
-        </a>
-        {/* <p className="
-    absolute 
-    top-1/2 
-    -translate-y-1/2 
-    left-4 
-    md:left-16 
-    text-white 
-    text-center 
-    max-w-md 
-    px-4 
-    text-4xl 
-    md:text-5xl 
-    leading-tight
-  ">
-    Adversity wasn’t the end. <br />It was the blueprint.”
-  </p> */}
+
+<Link to="/episodes/tamika-catchings-adversity-was-the-blueprint">
+  <picture>
+    <source
+      media="(min-width: 1100px)"
+      srcSet={tamikaDesktop}
+      // alt="Tamika Catchings Layup - Desktop View"
+    />
+    <img
+      src={tamika}
+      alt="Tamika Catchings Layup"
+      className="w-full h-auto object-cover"
+    />
+  </picture>
+</Link>
+
       </div>
-
-
-      {/* <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 mt-12 px-6 md:px-12">
-          <div className="text-white md:w-1/2 text-center md:text-left">
-            <p className="text-lg mb-4">
-              “Well, it can’t get any worse; you can still win this game. Take it one possession at a time. I’ll tell you this much: if we’re going down, we’re going down fighting.”
-            </p>
-            <a
-              href="https://fireandwhitepodcast.buzzsprout.com/2221953/episodes/14897211-tamika-catchings"
-              className="inline-block bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition"
-            >
-              Hear More!
-            </a>
-          </div>
-          <div className="md:w-1/2 w-full flex justify-center md:mb-0 -ml-4 sm:-ml-[90px] md:ml-0">
-            <img
-              src={Pat}
-              alt="Pat Summitt"
-              className="w-full max-w-[300px] md:max-w-none md:h-[400px] object-contain"
-            />
-
-          </div>
-        </div> */}
 
       <section className="text-white flex flex-col items-center justify-center text-center mt-0 py-12">
         <h1 className="text-5xl font-bold mb-1">Not Just a Podcast</h1>

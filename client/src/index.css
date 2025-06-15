@@ -105,7 +105,34 @@ audio {
   display: flex !important;
   align-items: center !important;
   background: transparent !important;
+  width: 75% !important;
+  max-width: 3000px !important;
 }
+
+@media (max-width: 640px) {  /* or your desired mobile breakpoint */
+  .rhap_main {
+    flex-direction: column !important;
+    align-items: stretch !important; /* make timeline full width */
+    gap: 0.5rem !important;  /* small vertical spacing */
+  }
+
+  /* Center play button horizontally */
+  .rhap_main-controls {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Make timeline full width */
+  .rhap_progress-section {
+    width: 100% !important;
+    max-width: none !important;
+    flex-grow: 0 !important;  /* disable grow in column */
+    flex-shrink: 0 !important;
+  }
+}
+
 
 /* Progress bar track */
 .rhap_progress-bar {
@@ -130,4 +157,10 @@ audio {
   margin: 0 !important;
   padding: 0 !important;
   overflow: hidden !important;
+}
+
+.rhap_time {
+  color: #ffffff !important; /* example: your orange color */
+  font-weight: 300; /* optional, for emphasis */
+  font-family: helvetica; /* optional, makes digits easier to read */
 }

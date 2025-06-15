@@ -8,13 +8,15 @@ import tamika from "../assets/images/tamika.png";
 import lisa from "../assets/images/lisa.png";
 import trailer from "../assets/images/trailer.png";
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+import { Link } from 'react-router-dom';
+
 
 const CarouselSlider: React.FC = () => {
   const sliderRef = useRef<Slider>(null);
 
   const settings = {
     dots: false,
-    arrows: false, 
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -35,24 +37,25 @@ const CarouselSlider: React.FC = () => {
   };
 
   const links = [
-    "https://fireandwhitepodcast.buzzsprout.com/2221953/episodes/17052500-97-comets-dawn-of-a-dynasty", // For '97 Comets
-    "https://fireandwhitepodcast.buzzsprout.com/2221953/episodes/15524368-lisa-leslie", // For Tamika
-    "https://fireandwhitepodcast.buzzsprout.com/2221953/episodes/14897211-tamika-catchings", // For Lisa
-    "https://fireandwhitepodcast.buzzsprout.com/2221953/episodes/14637220-welcome-to-fire-white" // For Trailer
+    "/episodes/97-comets-dawn-of-a-dynasty",
+    "/episodes/lisa-leslie-above-the-rim",
+    "/episodes/tamika-catchings-adversity-was-the-blueprint",
+    "/episodes/welcome-to-fire-white",
   ];
+
 
   return (
     <div className="relative">
       <Slider ref={sliderRef} {...settings}>
         {[comets, lisa, tamika, trailer, newComets].map((img, index) => (
           <div key={index} className="px-2 mt-11 mb-3">
-            <a href={links[index]} target="_blank" rel="noopener noreferrer">
+            <Link to={links[index]}>
               <img
                 src={img}
                 alt={`Slide ${index}`}
                 className="w-full h-full object-scale-down rounded-lg border-2 border-gray-500 shadow-lg transition duration-300 hover:scale-105"
               />
-            </a>
+            </Link>
           </div>
         ))}
       </Slider>
@@ -61,15 +64,15 @@ const CarouselSlider: React.FC = () => {
         <button
           onClick={() => sliderRef.current?.slickPrev()}
           className="text-white rounded-full shadow-dark p-2 px-4"
-    aria-label="Previous Slide"
+          aria-label="Previous Slide"
         >
-{React.createElement(FaChevronLeft as React.ElementType, { size: 16 })}        </button>
+          {React.createElement(FaChevronLeft as React.ElementType, { size: 16 })}        </button>
         <button
           onClick={() => sliderRef.current?.slickNext()}
           className="text-white rounded-full shadow-dark p-2 px-4"
-    aria-label="Next Slide"
+          aria-label="Next Slide"
         >
-{React.createElement(FaChevronRight as React.ElementType, { size: 16 })}        </button>
+          {React.createElement(FaChevronRight as React.ElementType, { size: 16 })}        </button>
       </div>
     </div>
   );
