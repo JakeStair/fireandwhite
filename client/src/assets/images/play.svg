@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="allergies" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M424.78,225.37L79.45,25.99c-19.31-11.15-43.45,2.79-43.45,25.08v398.76c0,22.3,24.14,36.23,43.45,25.08l345.33-199.38c19.31-11.15,19.31-39.02,0-50.17Z"/>
+</svg>

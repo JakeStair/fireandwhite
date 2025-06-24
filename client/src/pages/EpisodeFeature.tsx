@@ -8,6 +8,11 @@ import cometsDesktop from '../assets/images/comets-desktop.png';
 import lisaDesktop from '../assets/images/lisa-desktop.png';
 import tamikaDesktop from '../assets/images/tamika-desktop.png';
 import trailerDesktop from '../assets/images/trailer-desktop.png';
+import forwardIcon from '../assets/images/forward-5.svg';
+import backwardIcon from '../assets/images/backward-5.svg';
+import playIcon from '../assets/images/play.svg';
+import pauseIcon from '../assets/images/pause.svg';
+
 
 const slugify = (text: string) =>
   text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
@@ -62,26 +67,26 @@ const EpisodeFeature = () => {
 
         const matchedItem = feed.items.find(item => slugify(item.title || '') === id);
 
-if (matchedItem) {
-  const title = matchedItem.title || 'Untitled';
-  const slug = slugify(title);
+        if (matchedItem) {
+          const title = matchedItem.title || 'Untitled';
+          const slug = slugify(title);
 
-const selectedDesktopImage = desktopImages[slug];
-  console.log('Slug:', slug);
-  console.log('Matched desktop image:', selectedDesktopImage);
+          const selectedDesktopImage = desktopImages[slug];
+          console.log('Slug:', slug);
+          console.log('Matched desktop image:', selectedDesktopImage);
 
-  setEpisode({
-    title,
-    pubDate: matchedItem.pubDate || '',
-    audioUrl: matchedItem.enclosure?.url || '',
-    contentSnippet: matchedItem.contentSnippet || '',
-    link: matchedItem.link || '',
-    slug,
-    image: matchedItem.itunes?.image || feed.image?.url || '',
-    desktopImage: selectedDesktopImage,
-  });
-}
- else {
+          setEpisode({
+            title,
+            pubDate: matchedItem.pubDate || '',
+            audioUrl: matchedItem.enclosure?.url || '',
+            contentSnippet: matchedItem.contentSnippet || '',
+            link: matchedItem.link || '',
+            slug,
+            image: matchedItem.itunes?.image || feed.image?.url || '',
+            desktopImage: selectedDesktopImage,
+          });
+        }
+        else {
           setError('Episode not found.');
         }
       } catch (err: any) {
@@ -117,12 +122,12 @@ const selectedDesktopImage = desktopImages[slug];
 
   const skipBackward = () => {
     if (!audioRef.current) return;
-    audioRef.current.currentTime = Math.max(0, audioRef.current.currentTime - 15);
+    audioRef.current.currentTime = Math.max(0, audioRef.current.currentTime - 5);
   };
 
   const skipForward = () => {
     if (!audioRef.current) return;
-    audioRef.current.currentTime = Math.min(duration, audioRef.current.currentTime + 30);
+    audioRef.current.currentTime = Math.min(duration, audioRef.current.currentTime + 5);
   };
 
   const onSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -171,17 +176,17 @@ const selectedDesktopImage = desktopImages[slug];
               alt={episode.title}
               className="w-full rounded-lg mb-6 object-cover block md:hidden"
             />
-{episode.desktopImage ? (
-  <img
-    src={episode.desktopImage}
-    alt={`${episode.title} desktop`}
-    className="w-full rounded-lg mb-6 object-cover hidden md:block"
-  />
-) : (
-  <div className="w-full rounded-lg mb-6 hidden md:block bg-gray-700 h-64 flex items-center justify-center text-white text-sm">
-    No desktop image
-  </div>
-)}
+            {episode.desktopImage ? (
+              <img
+                src={episode.desktopImage}
+                alt={`${episode.title} desktop`}
+                className="w-full rounded-lg mb-6 object-cover hidden md:block"
+              />
+            ) : (
+              <div className="w-full rounded-lg mb-6 hidden md:block bg-gray-700 h-64 flex items-center justify-center text-white text-sm">
+                No desktop image
+              </div>
+            )}
 
           </>
         )}
@@ -191,56 +196,59 @@ const selectedDesktopImage = desktopImages[slug];
           {new Date(episode.pubDate).toLocaleDateString()}
         </time>
 
-        <audio
-          ref={audioRef}
-          src={episode.audioUrl}
-          preload="metadata"
-          onTimeUpdate={onTimeUpdate}
-          onLoadedMetadata={onLoadedMetadata}
-          onEnded={onEnded}
-        />
+<audio
+  ref={audioRef}
+  src={episode.audioUrl}
+  preload="metadata"
+  onTimeUpdate={onTimeUpdate}
+  onLoadedMetadata={onLoadedMetadata}
+  onEnded={onEnded}
+/>
 
-        <div className="audio-controls flex justify-center items-center gap-8 mb-6">
-          <button
-            aria-label="Skip Backward 5 seconds"
-            onClick={skipBackward}
-            type="button"
-            className="p-3 rounded-full bg-[#5d5d5d] hover:bg-[#ff7f1d] transition-colors duration-300 shadow-md"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M11 19l-7-7 7-7M18 19l-7-7 7-7" />
-            </svg>
-          </button>
+{/* Play Section */}
+<div className="audio-controls flex justify-center items-center gap-8 mb-6">
+  <button
+    onClick={skipBackward}
+    className="control-btn"
+    aria-label="Skip Backward 15 seconds"
+  >
+    <img
+      src={backwardIcon}
+      alt="Back 15s"
+      className="w-8 h-8 transition-transform duration-200 ease-in-out hover:scale-110"
+      // hover:drop-shadow-[0_0_6px_#ff7f1d]
+    />
+  </button>
 
-          <button
-            aria-label={isPlaying ? 'Pause' : 'Play'}
-            onClick={togglePlayPause}
-            type="button"
-            className="p-4 rounded-full bg-[#5d5d5d] hover:bg-[#ff7f1d] transition-colors duration-300 shadow-lg flex items-center justify-center"
-          >
-            {isPlaying ? (
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <rect x="6" y="5" width="4" height="14" rx="1" />
-                <rect x="14" y="5" width="4" height="14" rx="1" />
-              </svg>
-            ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 5v14l14-7-14-7z" />
-              </svg>
-            )}
-          </button>
+  <button
+    onClick={togglePlayPause}
+    className="control-btn"
+    aria-label={isPlaying ? 'Pause' : 'Play'}
+  >
+    <img
+      src={isPlaying ? pauseIcon : playIcon}
+      alt={isPlaying ? 'Pause' : 'Play'}
+      className="transition-transform duration-200 ease-in-out hover:scale-110"
+      // hover:drop-shadow-[0_0_12px_#ff7f1d]
+    />
+  </button>
 
-          <button
-            aria-label="Skip Forward 5 seconds"
-            onClick={skipForward}
-            type="button"
-            className="p-3 rounded-full bg-[#5d5d5d] hover:bg-[#ff7f1d] transition-colors duration-300 shadow-md"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13 5l7 7-7 7M6 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
+  <button
+    onClick={skipForward}
+    className="control-btn"
+    aria-label="Skip Forward 30 seconds"
+  >
+    <img
+      src={forwardIcon}
+      alt="Forward 30s"
+      className="w-8 h-8 transition-transform duration-200 ease-in-out hover:scale-110"
+      // hover:drop-shadow-[0_0_6px_#ff7f1d]
+    />
+  </button>
+</div>
+
+
+{/* //TIMELINE SECTION! */}
 
         <div className="timeline-row flex items-center gap-4">
           <span className="timecode">{formatTime(currentTime)}</span>

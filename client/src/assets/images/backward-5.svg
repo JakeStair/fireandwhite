@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="allergies" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 32px;
+      }
+
+      .cls-2 {
+        font-family: GalGothicVariableRoman-Extrabold, 'Gal Gothic Variable';
+        font-size: 312.04px;
+        font-variation-settings: 'wght' 800;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M98.74,37.38l46.83,67.03c3.47,4.97.3,11.84-5.74,12.42l-86.31,8.26c-6.26.6-10.69-5.99-7.77-11.56l39.48-75.29c2.76-5.26,10.11-5.73,13.51-.86Z"/>
+  <path class="cls-3" d="M111.06,80.24c38.03-31.38,86.78-50.24,139.94-50.24,121.5,0,220,98.5,220,220s-98.5,220-220,220S31,371.5,31,250"/>
+  <text class="cls-2" transform="translate(161.05 350.65)"><tspan x="0" y="0">5</tspan></text>
+</svg>
